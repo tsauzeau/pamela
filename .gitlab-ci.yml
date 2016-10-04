@@ -1,0 +1,14 @@
+image: tsauzeau/blinux-norme:latest
+
+variables:
+    MAKE_RULE: re
+    
+Linux:
+  script:
+  - /home/bill/make.sh
+  - mv /home/bill/mouli .
+  artifacts:
+    paths:
+    - mouli
+  tags:
+    - linux
