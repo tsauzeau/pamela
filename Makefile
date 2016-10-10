@@ -1,6 +1,6 @@
-NAME		= pam
+NAME		= pamela
 
-LIBNAME		= lib$(NAME).so
+LIBNAME		= pam_$(NAME).so
 
 CC		= gcc -g
 
@@ -21,7 +21,7 @@ CFLAGS		+= -fPIC -fno-stack-protector
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
 	@if [ ! -d $(OBJDIR) ] ; then mkdir $(OBJDIR) ; fi
 	@if [ ! -d $(OBJDIR)/exec ] ; then mkdir $(OBJDIR)/exec ; fi
-	$(CC) $(CFLAGS) $(FPIC) -c -o $@ $<
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 $(LIBNAME): $(OBJ)
 	ld -x --shared -o $(LIBNAME) $(OBJ)
