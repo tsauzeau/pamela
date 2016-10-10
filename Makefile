@@ -31,7 +31,7 @@ $(LIBNAME): $(OBJ)
 all: $(LIBNAME)
 
 install: all
-	$(cp) $(LIBNAME) /lib/security
+	$(CP) $(LIBNAME) /lib/security/$(LIBNAME)
 
 clean:
 	rm -rf $(OBJ)
