@@ -4,6 +4,8 @@ LIBNAME		= pam_$(NAME).so
 
 CC		= gcc -g
 
+CP		= cp
+
 SRCDIR		= src
 
 OBJDIR		= obj
@@ -27,6 +29,9 @@ $(LIBNAME): $(OBJ)
 	ld -x --shared -o $(LIBNAME) $(OBJ)
 
 all: $(LIBNAME)
+
+install: all
+	$(cp) $(LIBNAME) /lib/security
 
 clean:
 	rm -rf $(OBJ)
