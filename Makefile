@@ -1,14 +1,6 @@
-##
-## Makefile for my_ftp in /home/thomas/Projects/Epitech/Tek2/my_ftp
-## 
-## Made by Thomas Sauzeau
-## Login   <thomas@epitech.net>
-## 
-## Started on  Sun May 15 21:34:56 2016 Thomas Sauzeau
-## Last update Sun May 15 21:35:05 2016 Thomas Sauzeau
-##
-
 NAME		= pam
+
+LIBNAME		= lib$(NAME).so
 
 CC		= gcc -g
 
@@ -20,25 +12,28 @@ SRC		= main.c
 
 OBJ		= $(addprefix $(OBJDIR)/, $(SRC:.c=.o))
 
-CXXFLAGS	+= -W -Wall -Wextra
-CXXFLAGS	+= -Iinclude
+LDFLAGS		= -lpam -lpam_misc
+
+CFLAGS		+= -W -Wall -Wextra
+CFLAGS		+= -Iinclude
+CFLAGS		+= -fPIC -fno-stack-protector
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
 	@if [ ! -d $(OBJDIR) ] ; then mkdir $(OBJDIR) ; fi
 	@if [ ! -d $(OBJDIR)/exec ] ; then mkdir $(OBJDIR)/exec ; fi
-	$(CC) $(CXXFLAGS) $(FPIC) -c -o $@ $<
+	$(CC) $(CFLAGS) $(FPIC) -c -o $@ $<
 
-$(NAME): $(OBJ)
-	$(CC) $(CXXFLAGS) $(OBJ) -o $(NAME) $(LDFLAGS)
+$(LIBNAME): $(OBJ)
+	ld -x --shared -o $(LIBNAME) $(OBJ)
 
-all: $(NAME)
+all: $(LIBNAME)
 
 clean:
 	rm -rf $(OBJ)
 	rm -rf $(OBJDIR)
 
 fclean: clean
-	rm -rf $(NAME)
+	rm -rf $(LIBNAME)
 
 re: fclean all
 
