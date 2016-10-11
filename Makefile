@@ -26,7 +26,7 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 $(LIBNAME): $(OBJ)
-	ld -x --shared -o $(LIBNAME) $(OBJ)
+	$(CC) -shared -o $(LIBNAME) $(OBJ) $(LIDFLAGS)
 
 all: $(LIBNAME)
 
