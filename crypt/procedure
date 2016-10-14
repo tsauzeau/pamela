@@ -1,0 +1,21 @@
+Create Volume (in root):
+dd if=/dev/urandom of=toto.img bs=1024 count=16384 // Create a volume in img "toto.img" of size 16 MB
+losetup -f // Retrieve the next loopback device avaible
+losetup /dev/loop1 toto.img // Mount the img (on loopback 1)
+dd if=/dev/urandom of=key.key bs=1024 count=4 // Generate a key for the volume
+cryptsetup luksFormat /dev/loop1 key.key // Crypt the loopback 1 device with the generated key
+losetup -f // Retrieve the next loopback device avaible
+losetup /dev/loop1 toto.img // Mount the img (on loopback 1)
+cryptsetup luksOpen /dev/loop1 home -d key.key // Map the volume on the loopback 1 with the generated key and with a name "home"
+mkfs.ext4 /dev/mapper/home // Format the Device with Ext4
+
+Mount Volume:
+losetup -f // Retrieve the next loopback device avaible
+losetup /dev/loop1 toto.img // Mount the img (on loopback 1)
+cryptsetup luksOpen /dev/loop1 home -d key.key // Map the volume on the loopback 1 with the generated key and with a name "home"
+mount -t ext4 /dev/mapper/home /mnt/ // Mount the volume on /mnt
+
+Umount Volume:
+umount /mnt // Umount /mnt
+cryptsetup luksClose home // Close the volume
+losetup -d /dev/loop1 // Disconnect the device
