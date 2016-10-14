@@ -10,7 +10,7 @@ SRCDIR		= src
 
 OBJDIR		= obj
 
-SRC		= main.c
+SRC		= pam.c
 
 OBJ		= $(addprefix $(OBJDIR)/, $(SRC:.c=.o))
 
@@ -31,7 +31,7 @@ $(LIBNAME): $(OBJ)
 all: $(LIBNAME)
 
 install: all
-	$(CP) $(LIBNAME) /lib/security/$(LIBNAME)
+	$(CP) $(LIBNAME) /lib/x86_64-linux-gnu/security/$(LIBNAME)
 
 clean:
 	rm -rf $(OBJ)
