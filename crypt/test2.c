@@ -6,6 +6,7 @@
 #include <sys/types.h>
 #include <libcryptsetup.h>
 
+#include <sys/mount.h>
 #include <sys/stat.h>
 #include <fcntl.h>
 
@@ -140,9 +141,20 @@ int	desactivate(int argc, char *argv[])
   return r;
 }
 
-int main(int argc, char *argv[])
+int	mountPart(int agrc, char *argv[])
+{
+  mount("/dev/mapper/tata", "/mnt", "ext4" , 0, NULL);
+}
+
+int	uMountPart(int agrc, char *argv[])
+{
+
+}
+
+int	main(int argc, char *argv[])
 {
   //format(argc, argv);
-  activate(argc, argv);
+  //activate(argc, argv);
+  mountPart(argc, argv);
   //desactivate(argc, argv);
 }
