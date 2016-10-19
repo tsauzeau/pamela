@@ -1,0 +1,14 @@
+Create Volume (in root):
+dd if=/dev/urandom of=toto.img bs=1024 count=16384
+dd if=/dev/urandom of=key.key bs=1024 count=4
+cryptsetup luksFormat toto.img key.key
+cryptsetup luksOpen toto.img home -d key.key
+mkfs.ext4 /dev/mapper/home
+
+Mount Volume:
+cryptsetup luksOpen toto.img home -d key.key
+mount -t ext4 /dev/mapper/home /mnt
+
+Umount Volume:
+umount /mnt
+cryptsetup luksClose home
