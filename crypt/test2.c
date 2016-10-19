@@ -33,7 +33,7 @@ static int _read_mk(const char *file, char **key, int keysize)
   return -1;
 }
 
-int	crypt(int argc, char *argv[])
+int	format(int argc, char *argv[])
 {
   struct crypt_device *cd;
   struct crypt_params_luks1 params;
@@ -73,7 +73,7 @@ int	crypt(int argc, char *argv[])
 				      "foo",              /* passphrase - NULL means query*/
 				      3);                 /* size of passphrase */
 
-  printf("All ok");
+  printf("Format ok\n");
 }
 
 
@@ -97,23 +97,23 @@ int	activate(int argc, char *argv[])
     return r;
   }
   r = crypt_activate_by_passphrase(cd,            /* crypt context */
-				   "toto",   /* device name to activate */
+				   argv[3],   /* device name to activate */
 				   CRYPT_ANY_SLOT,/* which slot use (ANY - try all) */
 				   "foo", 3,      /* passphrase */
-				   CRYPT_ACTIVATE_READONLY); /* flags */
+				   0); /* flags */
   if (r < 0) {
-    printf("Device %s activation failed.\n", "toto");
+    printf("Device %s activation failed.\n", argv[3]);
     crypt_free(cd);
     return r;
   }
-  printf("LUKS device %s/%s is active.\n", crypt_get_dir(), "toto");
+  printf("LUKS device %s/%s is active.\n", crypt_get_dir(), argv[3]);
   printf("\tcipher used: %s\n", crypt_get_cipher(cd));
   printf("\tcipher mode: %s\n", crypt_get_cipher_mode(cd));
   printf("\tdevice UUID: %s\n", crypt_get_uuid(cd));
-  r = crypt_get_active_device(cd, "toto", &cad);
+  r = crypt_get_active_device(cd, argv[3], &cad);
   if (r < 0) {
-    printf("Get info about active device %s failed.\n", "toto");
-    crypt_deactivate(cd, "toto");
+    printf("Get info about active device %s failed.\n", argv[3]);
+    crypt_deactivate(cd, argv[3]);
     crypt_free(cd);
     return r;
   }
@@ -122,16 +122,27 @@ int	activate(int argc, char *argv[])
 	 "\tIV offset (in sectors)    : %" PRIu64 "\n"
 	 "\tdevice size (in sectors)  : %" PRIu64 "\n"
 	 "\tread-only flag            : %s\n",
-	 "toto", cad.offset, cad.iv_offset, cad.size,
+	 argv[3], cad.offset, cad.iv_offset, cad.size,
 	 cad.flags & CRYPT_ACTIVATE_READONLY ? "1" : "0");
 
   crypt_free(cd);
   return 0;
 }
 
+int	desactivate(int argc, char *argv[])
+{
+  struct crypt_device *cd = NULL;
+  int r;
+  r = crypt_init_by_name(&cd, argv[3]);
+  if (r == 0)
+    r = crypt_deactivate(cd, argv[3]);
+  crypt_free(cd);
+  return r;
+}
 
 int main(int argc, char *argv[])
 {
-  crypt(argc, argv);
+  //format(argc, argv);
   activate(argc, argv);
+  //desactivate(argc, argv);
 }
