@@ -2,7 +2,7 @@ NAME		= pamela
 
 LIBNAME		= pam_$(NAME).so
 
-CC		= gcc -g
+CC		= g++ -g
 
 CP		= cp
 
