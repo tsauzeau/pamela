@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -std=c++11  -shared -Wl,-soname,pam_pamela.so -o pam_pamela.so CMakeFiles/pam_pamela.dir/src/Exception.cpp.o CMakeFiles/pam_pamela.dir/src/Logger.cpp.o CMakeFiles/pam_pamela.dir/src/pam.cpp.o 

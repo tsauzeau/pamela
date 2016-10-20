@@ -1,0 +1,3 @@
+/home/thomas/Projects/Tek3/pamela/build/CMakeFiles/rebuild_cache.dir
+/home/thomas/Projects/Tek3/pamela/build/CMakeFiles/edit_cache.dir
+/home/thomas/Projects/Tek3/pamela/build/CMakeFiles/pam_pamela.dir
