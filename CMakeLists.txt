@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.6)
+cmake_minimum_required(VERSION 2.8)
 project(pamela)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
@@ -13,7 +13,7 @@ set(SOURCE_FILES
         include/Logger.hh
         src/Exception.cpp
     src/Logger.cpp
-        src/pam.cpp)
+        src/pam.cpp src/Crypt.cpp include/Crypt.hh)
 
 add_library(pam_pamela SHARED ${SOURCE_FILES})
 

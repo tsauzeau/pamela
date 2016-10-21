@@ -1,0 +1,6 @@
+- Create class for libcrypt
+- Clean code
+- Repair FindCryptSetup.cmake (doesn't work for debian)
+- Redirect logger to file
+- Use Exception for error managing
+- Use logger anywhere
