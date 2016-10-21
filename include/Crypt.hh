@@ -20,11 +20,15 @@ public:
 
 private:
     int format();
+    int activate();
 
 private:
     const std::string name;
     std::string containerPath;
     std::string keyPath;
+
+    int create();
+    int blankFile(int size);
 };
 
 

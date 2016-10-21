@@ -9,6 +9,9 @@
 #include <inttypes.h>
 #include <sys/types.h>
 #include <libcryptsetup.h>
+#include <string>
+#include <fstream>
+
 
 #include <sys/mount.h>
 #include <sys/stat.h>
@@ -41,6 +44,23 @@ static int _read_mk(const char *file, char **key, int keysize) {
     return -1;
 }
 
+inline bool exist(const std::string &name) {
+    std::ifstream f(name.c_str());
+    return f.good();
+}
+
+int Crypt::blankFile(int size) {
+    std::vector<char> empty(1024, 0);
+    std::ofstream ofs(containerPath.c_str(), std::ios::binary | std::ios::out);
+
+    for (int i = 0; i < 1024 * size; i++) {
+        if (!ofs.write(&empty[0], empty.size())) {
+            std::cerr << "problem writing to file" << std::endl;
+            return 255;
+        }
+    }
+}
+
 Crypt::Crypt(std::string &name) : name(name) {
     logger.debug << "Create the Crypt object";
     containerPath = "/opt/containers/" + name + ".img";
@@ -63,7 +83,7 @@ int Crypt::close() {
     return 0;
 }
 
-int Crypt::open() {
+int Crypt::activate() {
     logger.debug << "Try to open the container for: " + name;
     struct crypt_device *cd;
     struct crypt_active_device cad;
@@ -74,19 +94,13 @@ int Crypt::open() {
         printf("crypt_init() failed for %s.\n", containerPath.c_str());
         return r;
     }
-    r = crypt_load(cd,              /* crypt context */
-                   CRYPT_LUKS1,     /* requested type */
-                   NULL);           /* additional parameters (not used) */
+    r = crypt_load(cd, CRYPT_LUKS1, NULL);
     if (r < 0) {
         printf("crypt_load() failed on device %s.\n", crypt_get_device_name(cd));
         crypt_free(cd);
         return r;
     }
-    r = crypt_activate_by_passphrase(cd,            /* crypt context */
-                                     name.c_str(),   /* device name to activate */
-                                     CRYPT_ANY_SLOT,/* which slot use (ANY - try all) */
-                                     "foo", 3,      /* passphrase */
-                                     0); /* flags */
+    r = crypt_activate_by_passphrase(cd, name.c_str(), CRYPT_ANY_SLOT, "foo", 3, 0);
     if (r < 0) {
         printf("Device %s activation failed.\n", name.c_str());
         crypt_free(cd);
@@ -143,5 +157,34 @@ int Crypt::format() {
     r = crypt_keyslot_add_by_volume_key(cd, CRYPT_ANY_SLOT, key, keysize, "foo", 3);
 
     printf("Format ok\n");
+    return 0;
+}
+
+int Crypt::create() {
+    std::string input;
+    logger.debug << "Ask for the container size";
+    std::cout
+            << "Hello new user, welcome in the beautiful world of the security and paranoia, what is the size of your container ? (in Mo):"
+            << std::endl;
+    getline(std::cin, input);
+    logger.debug << "Create a container with a size of " + input + "Mb in " + containerPath;
+    std::cout << "Create the image, this take some time, please wait..." << std::endl;
+    blankFile(std::stoi(input));
+    std::cout << "Create the key" << std::endl;
+    //Generate key
+    std::cout << "Format the image, this take some time, please wait..." << std::endl;
+    this->format();
+}
+
+int Crypt::open() {
+    if (name == "root") {
+        logger.debug << "Wohou he's root, a kind of voodoo, don't talk to him otherwise he launch a sort on us !";
+    } else if (exist(containerPath.c_str())) {
+        logger.debug << "User already have a container (" + containerPath + ")";
+        this->activate();
+    } else {
+        logger.debug << "User is new, Wouhou !  (" + containerPath + ")";
+        this->create();
+    }
     return 0;
 }

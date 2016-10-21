@@ -13,8 +13,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6ea2bb4-50b9-42f2-9d95-cc2ec39a6fd9" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/Crypt.hh" afterPath="$PROJECT_DIR$/include/Crypt.hh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crypt.cpp" afterPath="$PROJECT_DIR$/src/Crypt.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pam.cpp" afterPath="$PROJECT_DIR$/src/pam.cpp" />
     </list>
     <ignored path="pamela.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,7 +51,7 @@
       <file leaf-file-name="Logger.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logger.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
+            <state relative-caret-position="4104">
               <caret line="152" column="47" selection-start-line="152" selection-start-column="47" selection-end-line="152" selection-end-column="47" />
               <folding>
                 <marker date="1477075366816" expanded="true" signature="456:459" ph="{...}" />
@@ -84,8 +88,8 @@
       <file leaf-file-name="pam.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pam.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
-              <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+            <state relative-caret-position="837">
+              <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -128,7 +132,7 @@
       <file leaf-file-name="test2.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crypt/test2.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
+            <state relative-caret-position="2052">
               <caret line="76" column="24" selection-start-line="38" selection-start-column="2" selection-end-line="76" selection-end-column="24" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -140,8 +144,8 @@
       <file leaf-file-name="Crypt.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Crypt.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1021">
-              <caret line="144" column="4" selection-start-line="144" selection-start-column="4" selection-end-line="144" selection-end-column="26" />
+            <state relative-caret-position="1393">
+              <caret line="173" column="18" selection-start-line="173" selection-start-column="18" selection-end-line="173" selection-end-column="18" />
               <folding>
                 <element signature="e#41#59#0" expanded="true" />
               </folding>
@@ -152,8 +156,8 @@
       <file leaf-file-name="Crypt.hh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/Crypt.hh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="26" column="23" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="23" />
+            <state relative-caret-position="783">
+              <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
               <folding>
                 <element signature="e#88#106#0" expanded="true" />
               </folding>
@@ -175,10 +179,10 @@
         <option value="$PROJECT_DIR$/cmake/Modules/FindCRYPTSETUP.cmake" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/Logger.cpp" />
-        <option value="$PROJECT_DIR$/src/pam.cpp" />
         <option value="$PROJECT_DIR$/src/Exception.cpp" />
-        <option value="$PROJECT_DIR$/include/Crypt.hh" />
         <option value="$PROJECT_DIR$/todo" />
+        <option value="$PROJECT_DIR$/src/pam.cpp" />
+        <option value="$PROJECT_DIR$/include/Crypt.hh" />
         <option value="$PROJECT_DIR$/src/Crypt.cpp" />
       </list>
     </option>
@@ -520,7 +524,9 @@
       <option name="presentableId" value="Default" />
       <updated>1476963728928</updated>
       <workItem from="1476963731158" duration="2737000" />
-      <workItem from="1477049581575" duration="7315000" />
+      <workItem from="1477049581575" duration="8754000" />
+      <workItem from="1477084310894" duration="650000" />
+      <workItem from="1477090610390" duration="3316000" />
     </task>
     <task id="LOCAL-00001" summary="Pass to Cmake, clean some files,  add logger">
       <created>1476965151568</created>
@@ -536,11 +542,18 @@
       <option name="project" value="LOCAL" />
       <updated>1477077638377</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="All under Cpp">
+      <created>1477078240748</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1477078240748</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10052000" />
+    <option name="totallyTimeSpent" value="15457000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="3840" height="2104" extended-state="6" />
@@ -548,22 +561,23 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299075" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299075" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299075" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299075" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299075" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -580,13 +594,232 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Pass to Cmake, clean some files,  add logger" />
     <MESSAGE value="Passed &quot;open partition to cpp&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Passed &quot;open partition to cpp&quot;" />
+    <MESSAGE value="All under Cpp" />
+    <option name="LAST_COMMIT_MESSAGE" value="All under Cpp" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="34" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logger.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4104">
+          <caret line="152" column="47" selection-start-line="152" selection-start-column="47" selection-end-line="152" selection-end-column="47" />
+          <folding>
+            <marker date="1477075366816" expanded="true" signature="456:459" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="473:476" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="514:542" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="636:1174" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="1225:1228" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="1251:1254" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="1291:1316" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="1382:1568" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="1617:1620" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="1641:1644" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="1680:1705" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="1769:1954" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="2003:2006" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="2027:2030" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="2066:2091" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="2155:2340" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="2391:2394" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="2417:2420" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="2457:2482" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="2548:2734" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="2785:2788" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="2811:2814" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="2851:2876" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="3166:3539" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="3564:3567" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="3749:4381" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pam.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/Logger.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="15" selection-end-column="20" />
+          <folding>
+            <element signature="e#279#297#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Exception.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crypt/test2.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2052">
+          <caret line="76" column="24" selection-start-line="38" selection-start-column="2" selection-end-line="76" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Crypt.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#41#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/Crypt.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding>
+            <element signature="e#88#106#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="34" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logger.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4104">
+          <caret line="152" column="47" selection-start-line="152" selection-start-column="47" selection-end-line="152" selection-end-column="47" />
+          <folding>
+            <marker date="1477075366816" expanded="true" signature="456:459" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="473:476" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="514:542" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="636:1174" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="1225:1228" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="1251:1254" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="1291:1316" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="1382:1568" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="1617:1620" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="1641:1644" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="1680:1705" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="1769:1954" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="2003:2006" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="2027:2030" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="2066:2091" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="2155:2340" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="2391:2394" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="2417:2420" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="2457:2482" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="2548:2734" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="2785:2788" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="2811:2814" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="2851:2876" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="3166:3539" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="3564:3567" ph="{...}" />
+            <marker date="1477075366816" expanded="true" signature="3749:4381" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pam.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/Logger.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="15" selection-end-column="20" />
+          <folding>
+            <element signature="e#279#297#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Exception.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crypt/test2.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2052">
+          <caret line="76" column="24" selection-start-line="38" selection-start-column="2" selection-end-line="76" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Crypt.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#41#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/Crypt.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding>
+            <element signature="e#88#106#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -663,7 +896,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -679,23 +911,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pam.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logger.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
+        <state relative-caret-position="4104">
           <caret line="152" column="47" selection-start-line="152" selection-start-column="47" selection-end-line="152" selection-end-column="47" />
           <folding>
             <marker date="1477075366816" expanded="true" signature="456:459" ph="{...}" />
@@ -754,19 +975,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/Crypt.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="26" column="23" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="23" />
-          <folding>
-            <element signature="e#88#106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crypt/test2.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
+        <state relative-caret-position="2052">
           <caret line="76" column="24" selection-start-line="38" selection-start-column="2" selection-end-line="76" selection-end-column="24" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -774,10 +985,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/pam.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/Crypt.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="783">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+          <folding>
+            <element signature="e#88#106#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Crypt.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1021">
-          <caret line="144" column="4" selection-start-line="144" selection-start-column="4" selection-end-line="144" selection-end-column="26" />
+        <state relative-caret-position="1393">
+          <caret line="173" column="18" selection-start-line="173" selection-start-column="18" selection-end-line="173" selection-end-column="18" />
           <folding>
             <element signature="e#41#59#0" expanded="true" />
           </folding>
