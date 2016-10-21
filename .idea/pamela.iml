@@ -9,6 +9,8 @@
       <sourceFolder url="file://$MODULE_DIR$/include/Logger.hh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/Exception.hh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cmake/Modules/FindPAM.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cmake/Modules/FindCRYPTSETUP.cmake" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">

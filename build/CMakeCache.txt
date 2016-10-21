@@ -165,8 +165,23 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Dependencies for target
-pam_pamela_LIB_DEPENDS:STATIC=
+//Path to a file.
+CRYPTSETUP_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+CRYPTSETUP_LIBRARY:FILEPATH=/usr/lib64/libcryptsetup.so
+
+//Path to a library.
+DL_LIBRARY:FILEPATH=/usr/lib64/libdl.so
+
+//Path to a file.
+PAM_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+PAM_LIBRARY:FILEPATH=/usr/lib64/libpam.so
+
+//Dependencies for the target
+pam_pamela_LIB_DEPENDS:STATIC=general;/usr/lib64/libpam.so;general;/usr/lib64/libdl.so;general;/usr/lib64/libcryptsetup.so;
 
 //Value Computed by CMake
 pamela_BINARY_DIR:STATIC=/home/thomas/Projects/Tek3/pamela/build
@@ -306,4 +321,10 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DL_LIBRARY
+DL_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PAM_INCLUDE_DIR
+PAM_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PAM_LIBRARY
+PAM_LIBRARY-ADVANCED:INTERNAL=1
 

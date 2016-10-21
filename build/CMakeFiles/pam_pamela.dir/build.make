@@ -142,6 +142,9 @@ pam_pamela.so: CMakeFiles/pam_pamela.dir/src/Exception.cpp.o
 pam_pamela.so: CMakeFiles/pam_pamela.dir/src/Logger.cpp.o
 pam_pamela.so: CMakeFiles/pam_pamela.dir/src/pam.cpp.o
 pam_pamela.so: CMakeFiles/pam_pamela.dir/build.make
+pam_pamela.so: /usr/lib64/libpam.so
+pam_pamela.so: /usr/lib64/libdl.so
+pam_pamela.so: /usr/lib64/libcryptsetup.so
 pam_pamela.so: CMakeFiles/pam_pamela.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/thomas/Projects/Tek3/pamela/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library pam_pamela.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pam_pamela.dir/link.txt --verbose=$(VERBOSE)

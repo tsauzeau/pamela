@@ -13,6 +13,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.6.2/CMakeSystem.cmake"
   "CMakeFiles/feature_tests.c"
   "CMakeFiles/feature_tests.cxx"
+  "../cmake/Modules/FindCRYPTSETUP.cmake"
+  "../cmake/Modules/FindPAM.cmake"
   "/usr/share/cmake-3.6/Modules/CMakeCCompiler.cmake.in"
   "/usr/share/cmake-3.6/Modules/CMakeCCompilerABI.c"
   "/usr/share/cmake-3.6/Modules/CMakeCInformation.cmake"

@@ -23,7 +23,7 @@ extern int	    pam_sm_open_session(pam_handle_t *pamh, int flags, int argc, cons
 
     username = NULL;
     pam_get_user(pamh, &username, NULL);
-    logger.debug << "Hello World from pam " << username << "\n";
+    std::cout<< "Hello Worldddd from pam " << username << "\n";
     return (PAM_SUCCESS);
 }
 
@@ -33,6 +33,6 @@ extern int	    pam_sm_close_session(pam_handle_t *pamh, __attribute__((unused)) 
 
     username = NULL;
     pam_get_user(pamh, &username, NULL);
-    logger.debug << "Hello World from pam " << username << "\n";
+    std::cout << "Hello Worldddd from pam " << username << "\n";
     return (PAM_SUCCESS);
 }
