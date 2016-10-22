@@ -13,12 +13,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6ea2bb4-50b9-42f2-9d95-cc2ec39a6fd9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/webServers.xml" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/crypt/.idea/crypt.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/crypt/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/crypt/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/crypt/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/crypt/a.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/crypt/key.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/crypt/loopback/find.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/crypt/procedure" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/crypt/test" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/crypt/test.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/crypt/test2.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/crypt/toto.img" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/crypt/procedure2" afterPath="$PROJECT_DIR$/procedure2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/Crypt.hh" afterPath="$PROJECT_DIR$/include/Crypt.hh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Crypt.cpp" afterPath="$PROJECT_DIR$/src/Crypt.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pam.cpp" afterPath="$PROJECT_DIR$/src/pam.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo" afterPath="$PROJECT_DIR$/todo" />
     </list>
     <ignored path="pamela.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,7 +95,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pam.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pam.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pam.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="918">
@@ -112,39 +122,25 @@
       <file leaf-file-name="todo" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/todo">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+            <state relative-caret-position="135">
+              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test2.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crypt/test2.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="643">
-              <caret line="143" column="0" selection-start-line="143" selection-start-column="0" selection-end-line="146" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Crypt.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Crypt.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Crypt.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2078">
-              <caret line="120" column="13" selection-start-line="120" selection-start-column="13" selection-end-line="120" selection-end-column="13" />
-              <folding>
-                <element signature="e#41#59#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="135">
+              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="procedure2" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crypt/procedure2">
+        <entry file="file://$PROJECT_DIR$/procedure2">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="324">
               <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="11" />
@@ -181,9 +177,9 @@
         <option value="$PROJECT_DIR$/src/Logger.cpp" />
         <option value="$PROJECT_DIR$/src/Exception.cpp" />
         <option value="$PROJECT_DIR$/include/Crypt.hh" />
+        <option value="$PROJECT_DIR$/src/pam.cpp" />
         <option value="$PROJECT_DIR$/todo" />
         <option value="$PROJECT_DIR$/src/Crypt.cpp" />
-        <option value="$PROJECT_DIR$/src/pam.cpp" />
       </list>
     </option>
   </component>
@@ -278,20 +274,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="crypt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pamela" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pamela" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="cmake" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -315,12 +297,13 @@
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/cmake/Modules" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/include" />
       <recent name="$PROJECT_DIR$/cmake" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cmake/Modules" />
     </key>
   </component>
   <component name="RunManager" selected="Application.pam_pamela">
@@ -532,7 +515,7 @@
       <workItem from="1477049581575" duration="8754000" />
       <workItem from="1477084310894" duration="650000" />
       <workItem from="1477090610390" duration="3475000" />
-      <workItem from="1477142461313" duration="7693000" />
+      <workItem from="1477142461313" duration="7788000" />
     </task>
     <task id="LOCAL-00001" summary="Pass to Cmake, clean some files,  add logger">
       <created>1476965151568</created>
@@ -569,15 +552,22 @@
       <option name="project" value="LOCAL" />
       <updated>1477150907455</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Unmounting ok">
+      <created>1477152913486</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1477152913486</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23309000" />
+    <option name="totallyTimeSpent" value="23404000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="3840" height="2104" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299075" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -588,7 +578,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994792" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -618,7 +608,8 @@
     <MESSAGE value="All under Cpp" />
     <MESSAGE value="Add the container creation phase, need to generate a random key..." />
     <MESSAGE value="Ok for mounting &amp;&amp; creating" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ok for mounting &amp;&amp; creating" />
+    <MESSAGE value="Unmounting ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unmounting ok" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -708,9 +699,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2052">
           <caret line="76" column="24" selection-start-line="38" selection-start-column="2" selection-end-line="76" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -718,9 +707,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4212">
           <caret line="156" column="84" selection-start-line="156" selection-start-column="84" selection-end-line="156" selection-end-column="84" />
-          <folding>
-            <element signature="e#41#59#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -817,9 +804,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2052">
           <caret line="76" column="24" selection-start-line="38" selection-start-column="2" selection-end-line="76" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -827,9 +812,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#41#59#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -926,9 +909,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2052">
           <caret line="76" column="24" selection-start-line="38" selection-start-column="2" selection-end-line="76" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -936,9 +917,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#41#59#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1099,24 +1078,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crypt/test2.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="143" column="0" selection-start-line="143" selection-start-column="0" selection-end-line="146" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/todo">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/Crypt.hh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="864">
@@ -1127,21 +1088,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crypt/procedure2">
+    <entry file="file://$PROJECT_DIR$/procedure2">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="11" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Crypt.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2078">
-          <caret line="120" column="13" selection-start-line="120" selection-start-column="13" selection-end-line="120" selection-end-column="13" />
-          <folding>
-            <element signature="e#41#59#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1152,6 +1103,30 @@
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crypt/test2.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="143" column="0" selection-start-line="143" selection-start-column="0" selection-end-line="146" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Crypt.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>

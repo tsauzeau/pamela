@@ -4,4 +4,3 @@
 - Use logger anywhere
 - Exit Cmake if modules couldn't find
 - Cmake install rule
-- Close ALL

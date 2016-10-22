@@ -4,19 +4,13 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <unistd.h>
 #include <inttypes.h>
-#include <sys/types.h>
 #include <libcryptsetup.h>
 #include <string>
 #include <fstream>
 
-#include <stdio.h>
-#include <stdlib.h>
-
 #include <sys/mount.h>
-#include <sys/stat.h>
 #include <fcntl.h>
 #include <malloc.h>
 
