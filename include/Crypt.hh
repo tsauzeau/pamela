@@ -29,6 +29,10 @@ private:
 
     int create();
     int blankFile(int size);
+
+    int mountPart();
+
+    int makeRight();
 };
 
 

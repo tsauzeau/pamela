@@ -12,6 +12,8 @@
 #include <string>
 #include <fstream>
 
+#include <stdio.h>
+#include <stdlib.h>
 
 #include <sys/mount.h>
 #include <sys/stat.h>
@@ -20,6 +22,12 @@
 
 #include "Logger.hh"
 #include "Crypt.hh"
+
+void mkfs(std::string &path) {
+    logger.debug << "Make filesystem ext4";
+    std::string cmd("mkfs.ext4 " + path);
+    system(cmd.c_str());
+}
 
 static int _read_mk(const char *file, char **key, int keysize) {
     int fd;
@@ -42,6 +50,17 @@ static int _read_mk(const char *file, char **key, int keysize) {
     free(*key);
     *key = NULL;
     return -1;
+}
+
+static std::string &randomKey() {
+    char *buffer;
+    std::string *key;
+    std::ifstream f("/dev/urandom");
+    buffer = new char[256 + 1];
+
+    f.read(buffer, 256);
+    key = new std::string(buffer);
+    return (*key);
 }
 
 inline bool exist(const std::string &name) {
@@ -69,6 +88,19 @@ Crypt::Crypt(std::string &name) : name(name) {
 
 Crypt::~Crypt() {
     logger.debug << "Destruct the Crypt object";
+}
+
+int Crypt::mountPart() {
+    std::string from("/dev/mapper/" + name);
+    std::string to("/home/" + name);
+    logger.debug << "Mounting partition to: " + to;
+    mount(from.c_str(), to.c_str(), "ext4", 0, NULL);
+}
+
+int Crypt::makeRight() {
+    std::string right("chown -R " + name + ":" + name + " /home/" + name);
+    logger.debug << "Making correct rights: " + right;
+    system(right.c_str());
 }
 
 int Crypt::close() {
@@ -156,7 +188,7 @@ int Crypt::format() {
     }
     r = crypt_keyslot_add_by_volume_key(cd, CRYPT_ANY_SLOT, key, keysize, "foo", 3);
 
-    printf("Format ok\n");
+    logger.debug << "Format ok";
     return 0;
 }
 
@@ -171,7 +203,9 @@ int Crypt::create() {
     std::cout << "Create the image, this take some time, please wait..." << std::endl;
     blankFile(std::stoi(input));
     std::cout << "Create the key" << std::endl;
-    //Generate key
+    std::ofstream out(this->keyPath);
+    out << randomKey();
+    out.close();
     std::cout << "Format the image, this take some time, please wait..." << std::endl;
     this->format();
 }
@@ -182,9 +216,15 @@ int Crypt::open() {
     } else if (exist(containerPath.c_str())) {
         logger.debug << "User already have a container (" + containerPath + ")";
         this->activate();
+        this->mountPart();
     } else {
         logger.debug << "User is new, Wouhou !  (" + containerPath + ")";
         this->create();
+        this->activate();
+        std::string cmd("/dev/mapper/" + name);
+        mkfs(cmd);
+        this->mountPart();
+        this->makeRight();
     }
     return 0;
 }
