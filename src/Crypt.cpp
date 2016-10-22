@@ -97,6 +97,12 @@ int Crypt::mountPart() {
     mount(from.c_str(), to.c_str(), "ext4", 0, NULL);
 }
 
+int Crypt::uMountPart() {
+    std::string cmd("umount /home/" + name);
+    logger.debug << "Unmounting: " + cmd;
+    system(cmd.c_str());
+}
+
 int Crypt::makeRight() {
     std::string right("chown -R " + name + ":" + name + " /home/" + name);
     logger.debug << "Making correct rights: " + right;
@@ -105,6 +111,7 @@ int Crypt::makeRight() {
 
 int Crypt::close() {
     logger.debug << "Try to close the container for: " + name;
+    this->uMountPart();
     struct crypt_device *cd = NULL;
     int r;
     r = crypt_init_by_name(&cd, name.c_str());
@@ -112,7 +119,6 @@ int Crypt::close() {
         r = crypt_deactivate(cd, name.c_str());
     crypt_free(cd);
     return r;
-    return 0;
 }
 
 int Crypt::activate() {

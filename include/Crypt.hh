@@ -33,6 +33,8 @@ private:
     int mountPart();
 
     int makeRight();
+
+    int uMountPart();
 };
 
 

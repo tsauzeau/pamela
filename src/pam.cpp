@@ -43,7 +43,8 @@ extern int pam_sm_close_session(pam_handle_t *pamh, __attribute__((unused)) int 
     username = NULL;
     pam_get_user(pamh, &username, NULL);
     user = username;
-    logger.debug << "Hello Worldddd from pam " + user;
+    logger.debug << "Good Bye from pam " + user;
     crypt = new Crypt(user);
+    crypt->close();
     return (PAM_SUCCESS);
 }
