@@ -8,7 +8,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/Logger.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/Exception.hh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/Logger.hh" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/include/defines.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/Crypt.hh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/cmake/Modules/FindPAM.cmake" isTestSource="false" />
