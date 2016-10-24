@@ -6,6 +6,7 @@
 #include <fstream>
 #include <sys/mount.h>
 #include <fcntl.h>
+#include "Logger.hh"
 #include "Utils.hh"
 
 Utils::Utils() {
@@ -21,8 +22,9 @@ int	Utils::read_mk(const std::string &filepath, std::string &key, int keysize)
 
   file.open(filepath.c_str(), std::ios::in);
   if (file.is_open()) {
-    if (getline(file, key) && key.size() != keysize)
-      logger.warn << "keysize expected [" + keysize + "], got [" + key.size() + "]";
+    if (getline(file, key) && key.size() != keysize) {
+      logger.warn << "keysize expected [" + std::to_string(keysize) + "], got [" + std::to_string(key.size()) + "]";
+    }
     file.close();
     return (0);
   }

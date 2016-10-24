@@ -119,7 +119,7 @@ int Crypt::format() {
     struct crypt_device *cd;
     struct crypt_params_luks1 params;
     int r;
-    char *key = NULL;
+    std::string key;
     int keysize;
 
     keysize = 256 / 8;
@@ -129,18 +129,18 @@ int Crypt::format() {
         return r;
     }
 
-    r = utils.read_mk(keyPath.c_str(), &key, keysize);
+    r = utils.read_mk(keyPath, key, keysize);
     params.hash = "sha1";
     params.data_alignment = 0;
     params.data_device = NULL;
-    r = crypt_format(cd, CRYPT_LUKS1, "aes", "xts-plain64", NULL, key, keysize, &params);
+    r = crypt_format(cd, CRYPT_LUKS1, "aes", "xts-plain64", NULL, key.c_str(), keysize, &params);
 
     if (r < 0) {
         printf("crypt_format() failed on device %s\n", crypt_get_device_name(cd));
         crypt_free(cd);
         return r;
     }
-    r = crypt_keyslot_add_by_volume_key(cd, CRYPT_ANY_SLOT, key, keysize, "foo", 3);
+    r = crypt_keyslot_add_by_volume_key(cd, CRYPT_ANY_SLOT, key.c_str(), keysize, "foo", 3);
 
     logger.debug << "Format ok";
     return 0;

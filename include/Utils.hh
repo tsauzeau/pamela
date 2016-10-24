@@ -1,6 +1,8 @@
 #ifndef UTILS_HH_
 # define UTILS_HH_
 
+#include "Logger.hh"
+
 class Utils {
 public:
   Utils();
