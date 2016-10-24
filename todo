@@ -2,5 +2,4 @@
 - Redirect logger to file
 - Use Exception for error managing
 - Use logger anywhere
-- Exit Cmake if modules couldn't find
 - Cmake install rule

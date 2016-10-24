@@ -17,13 +17,13 @@ set(SOURCE_FILES
 
 add_library(pam_pamela SHARED ${SOURCE_FILES})
 
-find_package(PAM)
+find_package(PAM REQUIRED)
 if (PAM_FOUND)
     include_directories(${PAM_INCLUDE_DIR})
     target_link_libraries (pam_pamela ${PAM_LIBRARIES})
 endif (PAM_FOUND)
 
-find_package(CRYPTSETUP)
+find_package(CRYPTSETUP REQUIRED)
 if (CRYPTSETUP_FOUND)
     include_directories(${CRYPTSETUP_INCLUDE_DIR})
     target_link_libraries (pam_pamela ${CRYPTSETUP_LIBRARIES})
