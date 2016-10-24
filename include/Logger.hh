@@ -1,13 +1,3 @@
-//
-// Logger.hpp for plazza in /home/thomas/cpp_plazza
-//
-// Made by Thomas Sauzeau
-// Login   <thomas@epitech.net>
-//
-// Started on  Wed Apr  6 18:43:26 2016 Thomas Sauzeau
-// Last update Sun Apr 24 23:06:38 2016 Cavaille Antoine
-//
-
 #ifndef LOGGER__HH__
 # define LOGGER__HH__
 
@@ -28,7 +18,7 @@
  */
 class Log {
 public:
-  Log(unsigned int log_level, std::string path = "");
+  Log(unsigned int log_level, bool log_file = true);
   ~Log();
 
 public:
@@ -103,12 +93,12 @@ public:
   public:
     Writer();
     ~Writer();
-    Writer& operator()(size_t, const std::string&, const std::vector<std::string>&, const std::string&);
+    Writer& operator()(const std::string&);
   };
 
 private:
   unsigned int		_log_level; /*!< Niveau de LOG entre 0 et 4 */
-  std::string		_path; /*!< Chemin vers le dossier d'enregistrement des logs. */
+  bool			_log_file; /*!< Si true, print sur le fichier de LOG "/var/log/pamela.log". */
 
 public:
   Log::Debug		debug;
@@ -118,7 +108,7 @@ public:
   Log::Fatal		fatal;
   Log::Writer		write;
   unsigned int get_level() const;
-  std::string get_path() const;
+  bool		isLogFile() const;
   std::string getDate() const;
 };
 

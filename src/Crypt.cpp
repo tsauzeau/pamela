@@ -9,58 +9,12 @@
 #include <libcryptsetup.h>
 #include <string>
 #include <fstream>
-
 #include <sys/mount.h>
 #include <fcntl.h>
-#include <malloc.h>
-
 #include "Logger.hh"
 #include "Crypt.hh"
+#include "Utils.hh"
 
-void mkfs(std::string &path) {
-    logger.debug << "Make filesystem ext4";
-    std::string cmd("mkfs.ext4 " + path);
-    system(cmd.c_str());
-}
-
-static int _read_mk(const char *file, char **key, int keysize) {
-    int fd;
-    *key = (char *) malloc(keysize);
-    if (!*key)
-        return -1;
-    fd = open(file, O_RDONLY);
-    if (fd == -1) {
-        printf("Cannot read keyfile %s.\n", file);
-        goto fail;
-    }
-    if ((read(fd, *key, keysize) != keysize)) {
-        printf("Cannot read %d bytes from keyfile %s.\n", keysize, file);
-        close(fd);
-        goto fail;
-    }
-    close(fd);
-    return 0;
-    fail:
-    free(*key);
-    *key = NULL;
-    return -1;
-}
-
-static std::string &randomKey() {
-    char *buffer;
-    std::string *key;
-    std::ifstream f("/dev/urandom");
-    buffer = new char[256 + 1];
-
-    f.read(buffer, 256);
-    key = new std::string(buffer);
-    return (*key);
-}
-
-inline bool exist(const std::string &name) {
-    std::ifstream f(name.c_str());
-    return f.good();
-}
 
 int Crypt::blankFile(int size) {
     std::vector<char> empty(1024, 0);
@@ -175,7 +129,7 @@ int Crypt::format() {
         return r;
     }
 
-    r = _read_mk(keyPath.c_str(), &key, keysize);
+    r = utils.read_mk(keyPath.c_str(), &key, keysize);
     params.hash = "sha1";
     params.data_alignment = 0;
     params.data_device = NULL;
@@ -204,7 +158,7 @@ int Crypt::create() {
     blankFile(std::stoi(input));
     std::cout << "Create the key" << std::endl;
     std::ofstream out(this->keyPath);
-    out << randomKey();
+    out << utils.randomKey();
     out.close();
     std::cout << "Format the image, this take some time, please wait..." << std::endl;
     this->format();
@@ -213,7 +167,7 @@ int Crypt::create() {
 int Crypt::open() {
     if (name == "root") {
         logger.debug << "Wohou he's root, a kind of voodoo, don't talk to him otherwise he launch a sort on us !";
-    } else if (exist(containerPath.c_str())) {
+    } else if (utils.exist(containerPath.c_str())) {
         logger.debug << "User already have a container (" + containerPath + ")";
         this->activate();
         this->mountPart();
@@ -222,7 +176,7 @@ int Crypt::open() {
         this->create();
         this->activate();
         std::string cmd("/dev/mapper/" + name);
-        mkfs(cmd);
+        utils.mkfs(cmd);
         this->mountPart();
         this->makeRight();
     }
